@@ -1,9 +1,15 @@
- extends:
-   - 'airbnb-base'
- env:
-   node: true
-   browser: true
-  
- rules:
-   no-console: 0
-   import/extensions: 0
+env:
+  commonjs: true
+  es6: true
+  node: true
+extends: 
+  - 'eslint:recommended'
+  - 'airbnb-base'
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+parserOptions:
+  ecmaVersion: 11
+rules:
+  no-console: 0
+  import/extensions: 0
