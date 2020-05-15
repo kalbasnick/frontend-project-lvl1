@@ -1,2 +1,2 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
-![](https://github.com/kalbasnick/frontend-project-lvl1/workflows/Makefile-linter-check/badge.svg)
+![](https://github.com/kalbasnick/frontend-project-lvl1/actions/badge.svg)
