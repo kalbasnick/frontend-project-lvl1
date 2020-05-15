@@ -2,6 +2,7 @@ name: Makefile-linter-check
 
 on:
   - push
+  - pull_request
 
 jobs:
   build:
