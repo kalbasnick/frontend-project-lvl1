@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
 // eslint-disable-next-line no-unused-vars
-import userName from '../src/games/cli.js';
+import brainGcd from '../src/games/gcd.js';

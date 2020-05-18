@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
 // eslint-disable-next-line no-unused-vars
-import userName from '../src/games/cli.js';
+import calc from '../src/games/calc.js';
