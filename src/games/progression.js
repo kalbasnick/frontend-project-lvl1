@@ -5,8 +5,9 @@ const getRandomProgression = () => {
   const startNum = getRandomNum(1, 90);
   const progression = [startNum];
   const step = 2;
+  const progressionLength = 10;
 
-  for (let nextNum = startNum + step; nextNum < (startNum + (step * 10)); nextNum += step) {
+  for (let nextNum = startNum + step; nextNum < (startNum + (step * progressionLength)); nextNum += step) {
     progression.push(nextNum);
   }
 
