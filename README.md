@@ -1,6 +1,6 @@
 # frontend-project-lvl1
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![Linter](https://github.com/kalbasnick/frontend-project-lvl1/workflows/Makefile-linter-check/badge.svg)](https://github.com/kalbasnick/frontend-project-lvl1/actions)
+[![Linter](https://github.com/kalbasnick/frontend-project-lvl1/workflows/Linter%20Check/badge.svg)](https://github.com/kalbasnick/frontend-project-lvl1/actions)
 
 # Games
 Brain-even:
