@@ -1,4 +1,7 @@
 #!/usr/bin/env node
 
-// eslint-disable-next-line no-unused-vars
 import brainPrime from '../src/games/isPrime.js';
+import { userName } from '../src/index.js';
+
+console.log(`Hello ${userName}! \nAnswer "yes" if given number is prime. Otherwise answer "no".`);
+console.log(brainPrime());

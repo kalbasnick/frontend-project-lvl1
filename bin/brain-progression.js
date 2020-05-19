@@ -1,4 +1,7 @@
 #!/usr/bin/env node
 
-// eslint-disable-next-line no-unused-vars
 import brainProgression from '../src/games/progression.js';
+import { userName } from '../src/index.js';
+
+console.log(`Hello ${userName}! \nWhat number is missing in the progression?`);
+console.log(brainProgression());

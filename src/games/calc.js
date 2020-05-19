@@ -39,6 +39,3 @@ const calc = () => {
 };
 
 export default calc;
-
-console.log(`Hello ${userName}! \nWhat is the result of the expression?`);
-console.log(calc());

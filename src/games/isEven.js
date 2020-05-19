@@ -37,6 +37,3 @@ const brainEven = () => {
 };
 
 export default brainEven;
-
-console.log(`Hello ${userName}! \nAnswer "yes" if the number is even, otherwise answer "no".`);
-console.log(brainEven());

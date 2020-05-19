@@ -39,6 +39,3 @@ const brainProgression = () => {
 };
 
 export default brainProgression;
-
-console.log(`Hello ${userName}! \nWhat number is missing in the progression?`);
-console.log(brainProgression());

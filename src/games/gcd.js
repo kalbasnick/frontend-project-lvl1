@@ -40,6 +40,3 @@ const brainGcd = () => {
 };
 
 export default brainGcd;
-
-console.log(`Hello ${userName}! \nFind the greatest common divisor of given numbers.`);
-console.log(brainGcd());

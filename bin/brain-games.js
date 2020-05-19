@@ -1,4 +1,5 @@
 #!/usr/bin/env node
 
-// eslint-disable-next-line no-unused-vars
 import userName from '../src/games/cli.js';
+
+console.log(`Hello ${userName}!`);
