@@ -1,7 +1,6 @@
 {
   "name": "frontend-project-lvl1",
-  "version": "1.0.8",
-  "main": "index.js",
+  "version": "1.0.9",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,7 +22,7 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "description": "",
+  "description": "First Frontend JavaScript Hexlet project.",
   "dependencies": {
     "readline-sync": "^1.4.10"
   },

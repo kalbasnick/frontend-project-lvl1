@@ -1,13 +1,15 @@
-import readlineSync from 'readline-sync';
-import { getRandomNum, userName, getRandomItem } from '../index.js';
+import { getRandomNum, question, getRandomItem } from '../index.js';
+
+const userName = question('Welcome to the Brain Games! \nMay I have your name?');
+console.log(`Hello, ${userName}! \nWhat number is missing in the progression?`);
 
 const getRandomProgression = () => {
   const startNum = getRandomNum(1, 90);
   const progression = [startNum];
   const step = 2;
-  const progressionLength = 10;
+  const progLength = 10;
 
-  for (let nextNum = startNum + step; nextNum < (startNum + (step * progressionLength)); nextNum += step) {
+  for (let nextNum = startNum + step; nextNum < (startNum + (step * progLength)); nextNum += step) {
     progression.push(nextNum);
   }
 
@@ -25,7 +27,7 @@ const brainProgression = () => {
     questionProgression[indexOfHiddenElement] = '..';
 
     console.log('Question:', questionProgression.join(' '));
-    const answer = readlineSync.question('Your answer: ');
+    const answer = question('Your answer: ');
 
     if (Number(answer) === correctAnswer) {
       console.log('Correct!');

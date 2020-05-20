@@ -1,5 +1,7 @@
-import readlineSync from 'readline-sync';
-import { getRandomNum, userName, getRandomItem } from '../index.js';
+import { getRandomNum, question, getRandomItem } from '../index.js';
+
+const userName = question('Welcome to the Brain Games! \nMay I have your name?');
+console.log(`Hello, ${userName}! \nWhat is the result of the expression?`);
 
 const randomOperation = (num1, num2, operator) => {
   if (operator === '+') {
@@ -24,7 +26,7 @@ const calc = () => {
     const correctAnswer = randomOperation(randomNum1, randomNum2, operator);
 
     console.log('Question:', `${randomNum1} ${operator} ${randomNum2}`);
-    const answer = readlineSync.question('Your answer: ');
+    const answer = question('Your answer:');
 
     if (Number(answer) === correctAnswer) {
       console.log('Correct!');

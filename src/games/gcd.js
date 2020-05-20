@@ -1,5 +1,7 @@
-import readlineSync from 'readline-sync';
-import { getRandomNum, userName } from '../index.js';
+import { getRandomNum, question } from '../index.js';
+
+const userName = question('Welcome to the Brain Games! \nMay I have your name?');
+console.log(`Hello, ${userName}! \nFind the greatest common divisor of given numbers.`);
 
 const greatestCommonDivisor = (num1, num2) => {
   if (num1 === num2) {
@@ -25,7 +27,7 @@ const brainGcd = () => {
     const correctAnswer = greatestCommonDivisor(randomNum1, randomNum2);
 
     console.log('Question:', `${randomNum1} ${randomNum2}`);
-    const answer = readlineSync.question('Your answer: ');
+    const answer = question('Your answer:');
 
     if (Number(answer) === correctAnswer) {
       console.log('Correct!');
