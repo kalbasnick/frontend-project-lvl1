@@ -4,12 +4,7 @@ greetings();
 const userName = question('May I have your name?');
 console.log(`Hello, ${userName}! \nAnswer "yes" if the number is even, otherwise answer "no".`);
 
-const isEven = (num) => {
-  if (num % 2 === 0) {
-    return true;
-  }
-  return false;
-};
+const isEven = (num) => (num % 2 === 0);
 
 const brainEven = () => {
   let correctAnswers = 0;
