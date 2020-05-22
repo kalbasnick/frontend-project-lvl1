@@ -2,4 +2,4 @@
 
 import brainGcd from '../src/games/gcd.js';
 
-console.log(brainGcd());
+brainGcd();

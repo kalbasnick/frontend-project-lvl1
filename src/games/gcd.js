@@ -1,6 +1,7 @@
-import { getRandomNum, question } from '../index.js';
+import { getRandomNum, question, greetings } from '../index.js';
 
-const userName = question('Welcome to the Brain Games! \nMay I have your name?');
+greetings();
+const userName = question('May I have your name?');
 console.log(`Hello, ${userName}! \nFind the greatest common divisor of given numbers.`);
 
 const greatestCommonDivisor = (num1, num2) => {
@@ -34,11 +35,12 @@ const brainGcd = () => {
       correctAnswers += 1;
     }
     if (Number(answer) !== correctAnswer) {
-      return `"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}". \nLet's try again, ${userName}!`;
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}". \nLet's try again, ${userName}!`);
+      return;
     }
   }
 
-  return `Congratulations, ${userName}!`;
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default brainGcd;

@@ -1,6 +1,7 @@
-import { getRandomNum, question } from '../index.js';
+import { getRandomNum, question, greetings } from '../index.js';
 
-const userName = question('Welcome to the Brain Games! \nMay I have your name?');
+greetings();
+const userName = question('May I have your name?');
 console.log(`Hello, ${userName}! \nAnswer "yes" if given number is prime. Otherwise answer "no".`);
 
 const isPrime = (num) => {
@@ -27,7 +28,8 @@ const brainPrime = () => {
         console.log('Correct!');
         correctAnswers += 1;
       } else {
-        return `"${answer}" is wrong answer ;(. Correct answer was "yes". \nLet's try again, ${userName}!`;
+        console.log(`"${answer}" is wrong answer ;(. Correct answer was "yes". \nLet's try again, ${userName}!`);
+        return;
       }
     }
     if (isPrime(randomNum) === false) {
@@ -35,12 +37,13 @@ const brainPrime = () => {
         console.log('Correct!');
         correctAnswers += 1;
       } else {
-        return `"${answer}" is wrong answer ;(. Correct answer was "no". \nLet's try again, ${userName}!`;
+        console.log(`"${answer}" is wrong answer ;(. Correct answer was "no". \nLet's try again, ${userName}!`);
+        return;
       }
     }
   }
 
-  return `Congratulations, ${userName}!`;
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default brainPrime;
