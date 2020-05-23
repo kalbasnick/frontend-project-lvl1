@@ -1,10 +1,15 @@
-import { getRandomNum, question, greetings } from '../index.js';
+import {
+  question,
+  greetings,
+  helloUser,
+  objective,
+  correct,
+  wrong,
+  congratulation,
+} from '../index.js';
+import { getRandomNum } from '../utils.js';
 
-greetings();
-const userName = question('May I have your name?');
-console.log(`Hello, ${userName}! \nFind the greatest common divisor of given numbers.`);
-
-const greatestCommonDivisor = (num1, num2) => {
+const getGreatestCommonDivisor = (num1, num2) => {
   if (num1 === num2) {
     return num1;
   }
@@ -16,31 +21,34 @@ const greatestCommonDivisor = (num1, num2) => {
       return divisor;
     }
   }
-
-  return undefined;
+  return null;
 };
 
-const brainGcd = () => {
+const launchGcd = () => {
+  greetings();
+  const userName = question('May I have your name?');
+  helloUser(userName);
+  objective('Find the greatest common divisor of given numbers.');
+
   let correctAnswers = 0;
   while (correctAnswers < 3) {
     const randomNum1 = getRandomNum(1, 100);
     const randomNum2 = getRandomNum(1, 100);
-    const correctAnswer = greatestCommonDivisor(randomNum1, randomNum2);
+    const correctAnswer = getGreatestCommonDivisor(randomNum1, randomNum2);
 
     console.log('Question:', `${randomNum1} ${randomNum2}`);
     const answer = question('Your answer:');
 
     if (Number(answer) === correctAnswer) {
-      console.log('Correct!');
+      correct();
       correctAnswers += 1;
-    }
-    if (Number(answer) !== correctAnswer) {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}". \nLet's try again, ${userName}!`);
+    } else {
+      wrong(answer, correctAnswer, userName);
       return;
     }
   }
 
-  console.log(`Congratulations, ${userName}!`);
+  congratulation(userName);
 };
 
-export default brainGcd;
+export default launchGcd;

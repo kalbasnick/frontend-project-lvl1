@@ -1,13 +1,13 @@
 import {
-  getRandomNum,
   question,
-  getRandomItem,
   greetings,
+  helloUser,
+  objective,
+  correct,
+  wrong,
+  congratulation,
 } from '../index.js';
-
-greetings();
-const userName = question('May I have your name?');
-console.log(`Hello, ${userName}! \nWhat number is missing in the progression?`);
+import { getRandomNum, getRandomItem } from '../utils.js';
 
 const getRandomProgression = () => {
   const startNum = getRandomNum(1, 90);
@@ -22,12 +22,17 @@ const getRandomProgression = () => {
   return progression;
 };
 
-const brainProgression = () => {
+const launchProgression = () => {
+  greetings();
+  const userName = question('May I have your name?');
+  helloUser(userName);
+  objective('What number is missing in the progression?');
+
   let correctAnswers = 0;
   while (correctAnswers < 3) {
     const randomProgression = getRandomProgression();
-    const hiddenElemet = getRandomItem(randomProgression);
-    const indexOfHiddenElement = randomProgression.indexOf(hiddenElemet);
+    const hiddenElement = getRandomItem(randomProgression);
+    const indexOfHiddenElement = randomProgression.indexOf(hiddenElement);
     const correctAnswer = randomProgression[indexOfHiddenElement];
     const questionProgression = randomProgression;
     questionProgression[indexOfHiddenElement] = '..';
@@ -36,16 +41,15 @@ const brainProgression = () => {
     const answer = question('Your answer:');
 
     if (Number(answer) === correctAnswer) {
-      console.log('Correct!');
+      correct();
       correctAnswers += 1;
-    }
-    if (Number(answer) !== correctAnswer) {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}". \nLet's try again, ${userName}!`);
+    } else {
+      wrong(answer, correctAnswer, userName);
       return;
     }
   }
 
-  console.log(`Congratulations, ${userName}!`);
+  congratulation(userName);
 };
 
-export default brainProgression;
+export default launchProgression;

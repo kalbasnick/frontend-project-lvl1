@@ -6,10 +6,22 @@ export const greetings = () => {
   console.log('Welcome to the Brain Games!');
 };
 
-export const getRandomNum = (min, max) => {
-  const minNum = Math.ceil(min);
-  const maxNum = Math.floor(max);
-  return Math.floor(Math.random() * (maxNum - minNum)) + 1;
+export const helloUser = (username) => {
+  console.log(`Hello, ${username}!`);
 };
 
-export const getRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
+export const objective = (whatToDo) => {
+  console.log(whatToDo);
+};
+
+export const correct = () => {
+  console.log('Correct!');
+};
+
+export const wrong = (userAnswer, rightAnswer, username) => {
+  console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}". \nLet's try again, ${username}!`);
+};
+
+export const congratulation = (username) => {
+  console.log(`Congratulations, ${username}!`);
+};

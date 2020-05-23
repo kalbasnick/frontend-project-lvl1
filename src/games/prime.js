@@ -1,8 +1,13 @@
-import { getRandomNum, question, greetings } from '../index.js';
-
-greetings();
-const userName = question('May I have your name?');
-console.log(`Hello, ${userName}! \nAnswer "yes" if given number is prime. Otherwise answer "no".`);
+import {
+  question,
+  greetings,
+  helloUser,
+  objective,
+  correct,
+  wrong,
+  congratulation,
+} from '../index.js';
+import { getRandomNum, getYesOrNo } from '../utils.js';
 
 const isPrime = (num) => {
   let divisor = Math.floor(num / 2);
@@ -15,35 +20,30 @@ const isPrime = (num) => {
   return true;
 };
 
-const brainPrime = () => {
+const launchPrime = () => {
+  greetings();
+  const userName = question('May I have your name?');
+  helloUser(userName);
+  objective('Answer "yes" if given number is prime. Otherwise answer "no".');
+
   let correctAnswers = 0;
   while (correctAnswers < 3) {
     const randomNum = getRandomNum(1, 1000);
+    const isNumberPrime = isPrime(randomNum);
 
     console.log('Question:', randomNum);
     const answer = question('Your answer:');
 
-    if (isPrime(randomNum) === true) {
-      if (answer === 'yes') {
-        console.log('Correct!');
-        correctAnswers += 1;
-      } else {
-        console.log(`"${answer}" is wrong answer ;(. Correct answer was "yes". \nLet's try again, ${userName}!`);
-        return;
-      }
-    }
-    if (isPrime(randomNum) === false) {
-      if (answer === 'no') {
-        console.log('Correct!');
-        correctAnswers += 1;
-      } else {
-        console.log(`"${answer}" is wrong answer ;(. Correct answer was "no". \nLet's try again, ${userName}!`);
-        return;
-      }
+    if (isNumberPrime ? (answer === 'yes') : (answer === 'no')) {
+      correct();
+      correctAnswers += 1;
+    } else {
+      wrong(answer, getYesOrNo(isNumberPrime), userName);
+      return;
     }
   }
 
-  console.log(`Congratulations, ${userName}!`);
+  congratulation(userName);
 };
 
-export default brainPrime;
+export default launchPrime;
