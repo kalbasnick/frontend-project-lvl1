@@ -1,7 +1,7 @@
-import { question } from './index.js';
+import { askQuestion } from './index.js';
 
 const launchWelcome = () => {
-  const name = question('Welcome to the Brain Games! \nMay I have your name?');
+  const name = askQuestion('Welcome to the Brain Games! \nMay I have your name?');
   console.log(`Hello, ${name}!`);
 };
 

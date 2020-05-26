@@ -1,19 +1,17 @@
 import {
-  question,
-  greetings,
-  helloUser,
-  objective,
-  correct,
-  wrong,
-  congratulation,
+  askQuestion,
+  askObjective,
+  showMessageCorrect,
+  showMessageWrong,
 } from '../index.js';
 import { getRandomNum, getRandomItem } from '../utils.js';
+
+const progLength = 15;
 
 const getRandomProgression = () => {
   const startNum = getRandomNum(1, 90);
   const progression = [startNum];
-  const step = 2;
-  const progLength = 10;
+  const step = getRandomNum(2, 9);
 
   for (let nextNum = startNum + step; nextNum < (startNum + (step * progLength)); nextNum += step) {
     progression.push(nextNum);
@@ -23,33 +21,29 @@ const getRandomProgression = () => {
 };
 
 const launchProgression = () => {
-  greetings();
-  const userName = question('May I have your name?');
-  helloUser(userName);
-  objective('What number is missing in the progression?');
+  askObjective('What number is missing in the progression?');
 
   let correctAnswers = 0;
   while (correctAnswers < 3) {
     const randomProgression = getRandomProgression();
-    const hiddenElement = getRandomItem(randomProgression);
-    const indexOfHiddenElement = randomProgression.indexOf(hiddenElement);
+    const indexOfHiddenElement = randomProgression.indexOf(getRandomItem(randomProgression));
     const correctAnswer = randomProgression[indexOfHiddenElement];
     const questionProgression = randomProgression;
     questionProgression[indexOfHiddenElement] = '..';
 
     console.log('Question:', questionProgression.join(' '));
-    const answer = question('Your answer:');
+    const userAnswer = askQuestion('Your answer:');
 
-    if (Number(answer) === correctAnswer) {
-      correct();
+    if (Number(userAnswer) === correctAnswer) {
+      showMessageCorrect();
       correctAnswers += 1;
     } else {
-      wrong(answer, correctAnswer, userName);
-      return;
+      showMessageWrong(userAnswer, correctAnswer);
+      return false;
     }
   }
 
-  congratulation(userName);
+  return true;
 };
 
 export default launchProgression;

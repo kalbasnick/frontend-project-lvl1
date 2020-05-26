@@ -1,15 +1,16 @@
 import {
-  question,
-  greetings,
-  helloUser,
-  objective,
-  correct,
-  wrong,
-  congratulation,
+  askQuestion,
+  askObjective,
+  showMessageCorrect,
+  showMessageWrong,
 } from '../index.js';
 import { getRandomNum, getYesOrNo } from '../utils.js';
 
 const isPrime = (num) => {
+  if (num < 1) {
+    return false;
+  }
+
   let divisor = Math.floor(num / 2);
   for (; divisor > 1; divisor -= 1) {
     if (num % divisor === 0) {
@@ -21,29 +22,27 @@ const isPrime = (num) => {
 };
 
 const launchPrime = () => {
-  greetings();
-  const userName = question('May I have your name?');
-  helloUser(userName);
-  objective('Answer "yes" if given number is prime. Otherwise answer "no".');
+  askObjective('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   let correctAnswers = 0;
   while (correctAnswers < 3) {
     const randomNum = getRandomNum(1, 1000);
     const isNumberPrime = isPrime(randomNum);
+    const correctAnswer = getYesOrNo(isNumberPrime);
 
     console.log('Question:', randomNum);
-    const answer = question('Your answer:');
+    const userAnswer = askQuestion('Your answer:');
 
-    if (isNumberPrime ? (answer === 'yes') : (answer === 'no')) {
-      correct();
+    if (userAnswer === correctAnswer) {
+      showMessageCorrect();
       correctAnswers += 1;
     } else {
-      wrong(answer, getYesOrNo(isNumberPrime), userName);
-      return;
+      showMessageWrong(userAnswer, correctAnswer);
+      return false;
     }
   }
 
-  congratulation(userName);
+  return true;
 };
 
 export default launchPrime;
