@@ -1,9 +1,4 @@
-import {
-  askQuestion,
-  askObjective,
-  showMessageCorrect,
-  showMessageWrong,
-} from '../index.js';
+import runGame from '../index.js';
 import { getRandomNum, getYesOrNo } from '../utils.js';
 
 const isPrime = (num) => {
@@ -11,8 +6,7 @@ const isPrime = (num) => {
     return false;
   }
 
-  let divisor = Math.floor(num / 2);
-  for (; divisor > 1; divisor -= 1) {
+  for (let divisor = Math.floor(num / 2); divisor > 1; divisor -= 1) {
     if (num % divisor === 0) {
       return false;
     }
@@ -21,28 +15,17 @@ const isPrime = (num) => {
   return true;
 };
 
+const getGamePrime = () => {
+  const randomNum = getRandomNum(1, 1000);
+  const isNumberPrime = isPrime(randomNum);
+  const correctAnswer = getYesOrNo(isNumberPrime);
+  const result = [randomNum, correctAnswer];
+
+  return result;
+};
+
 const launchPrime = () => {
-  askObjective('Answer "yes" if given number is prime. Otherwise answer "no".');
-
-  let correctAnswers = 0;
-  while (correctAnswers < 3) {
-    const randomNum = getRandomNum(1, 1000);
-    const isNumberPrime = isPrime(randomNum);
-    const correctAnswer = getYesOrNo(isNumberPrime);
-
-    console.log('Question:', randomNum);
-    const userAnswer = askQuestion('Your answer:');
-
-    if (userAnswer === correctAnswer) {
-      showMessageCorrect();
-      correctAnswers += 1;
-    } else {
-      showMessageWrong(userAnswer, correctAnswer);
-      return false;
-    }
-  }
-
-  return true;
+  runGame('Answer "yes" if given number is prime. Otherwise answer "no".', getGamePrime);
 };
 
 export default launchPrime;

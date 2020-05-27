@@ -1,9 +1,4 @@
-import {
-  askQuestion,
-  askObjective,
-  showMessageCorrect,
-  showMessageWrong,
-} from '../index.js';
+import runGame from '../index.js';
 import { getRandomNum } from '../utils.js';
 
 const getGreatestCommonDivisor = (num1, num2) => {
@@ -18,28 +13,17 @@ const getGreatestCommonDivisor = (num1, num2) => {
   return b;
 };
 
+const getGameGcd = () => {
+  const randomNum1 = getRandomNum(1, 100);
+  const randomNum2 = getRandomNum(1, 100);
+  const correctAnswer = String(getGreatestCommonDivisor(randomNum1, randomNum2));
+  const result = [`${randomNum1} ${randomNum2}`, correctAnswer];
+
+  return result;
+};
+
 const launchGcd = () => {
-  askObjective('Find the greatest common divisor of given numbers.');
-
-  let correctAnswers = 0;
-  while (correctAnswers < 3) {
-    const randomNum1 = getRandomNum(1, 100);
-    const randomNum2 = getRandomNum(1, 100);
-    const correctAnswer = String(getGreatestCommonDivisor(randomNum1, randomNum2));
-
-    console.log('Question:', `${randomNum1} ${randomNum2}`);
-    const userAnswer = askQuestion('Your answer:');
-
-    if (userAnswer === correctAnswer) {
-      showMessageCorrect();
-      correctAnswers += 1;
-    } else {
-      showMessageWrong(userAnswer, correctAnswer);
-      return false;
-    }
-  }
-
-  return true;
+  runGame('Find the greatest common divisor of given numbers.', getGameGcd);
 };
 
 export default launchGcd;
