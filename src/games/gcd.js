@@ -13,17 +13,16 @@ const getGreatestCommonDivisor = (num1, num2) => {
   return b;
 };
 
-const getGameGcd = () => {
+const generateRound = () => {
   const randomNum1 = getRandomNum(1, 100);
   const randomNum2 = getRandomNum(1, 100);
   const correctAnswer = String(getGreatestCommonDivisor(randomNum1, randomNum2));
-  const result = [`${randomNum1} ${randomNum2}`, correctAnswer];
 
-  return result;
+  return [`${randomNum1} ${randomNum2}`, correctAnswer];
 };
 
 const launchGcd = () => {
-  runGame('Find the greatest common divisor of given numbers.', getGameGcd);
+  runGame('Find the greatest common divisor of given numbers.', generateRound);
 };
 
 export default launchGcd;

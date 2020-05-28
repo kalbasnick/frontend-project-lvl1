@@ -2,7 +2,7 @@ import runGame from '../index.js';
 import { getRandomNum, getYesOrNo } from '../utils.js';
 
 const isPrime = (num) => {
-  if (num < 1) {
+  if (num <= 1) {
     return false;
   }
 
@@ -15,17 +15,16 @@ const isPrime = (num) => {
   return true;
 };
 
-const getGamePrime = () => {
+const generateRound = () => {
   const randomNum = getRandomNum(1, 1000);
   const isNumberPrime = isPrime(randomNum);
   const correctAnswer = getYesOrNo(isNumberPrime);
-  const result = [randomNum, correctAnswer];
 
-  return result;
+  return [randomNum, correctAnswer];
 };
 
 const launchPrime = () => {
-  runGame('Answer "yes" if given number is prime. Otherwise answer "no".', getGamePrime);
+  runGame('Answer "yes" if given number is prime. Otherwise answer "no".', generateRound);
 };
 
 export default launchPrime;

@@ -15,18 +15,17 @@ const getMathExpression = (num1, num2, operator) => {
   throw new Error('Argument must contain "+", "-" or "*".');
 };
 
-const getGameExpression = () => {
+const generateRound = () => {
   const randomNum1 = getRandomNum(1, 100);
   const randomNum2 = getRandomNum(1, 100);
   const operator = getRandomItem(['+', '-', '*']);
   const correctAnswer = String(getMathExpression(randomNum1, randomNum2, operator));
-  const result = [`${randomNum1} ${operator} ${randomNum2}`, correctAnswer];
 
-  return result;
+  return [`${randomNum1} ${operator} ${randomNum2}`, correctAnswer];
 };
 
 const launchCalc = () => {
-  runGame('What is the result of the expression?', getGameExpression);
+  runGame('What is the result of the expression?', generateRound);
 };
 
 export default launchCalc;

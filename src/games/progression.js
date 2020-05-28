@@ -3,26 +3,24 @@ import { getRandomNum } from '../utils.js';
 
 const progLength = 15;
 
-const getGameProgression = () => {
+const generateRound = () => {
   const startNum = getRandomNum(1, 90);
   const randomProgression = [startNum];
   const step = getRandomNum(2, 9);
+  const indexOfHiddenElement = getRandomNum(0, progLength - 1);
 
   for (let nextNum = startNum + step; nextNum < (startNum + (step * progLength)); nextNum += step) {
     randomProgression.push(nextNum);
   }
 
-  const askedProgression = randomProgression;
-  const indexOfHiddenElement = getRandomNum(0, progLength - 1);
   const correctAnswer = randomProgression[indexOfHiddenElement];
-  askedProgression[indexOfHiddenElement] = '..';
-  const result = [askedProgression.join(' '), correctAnswer];
+  randomProgression[indexOfHiddenElement] = '..';
 
-  return result;
+  return [randomProgression.join(' '), String(correctAnswer)];
 };
 
 const launchProgression = () => {
-  runGame('What number is missing in the progression?', getGameProgression);
+  runGame('What number is missing in the progression?', generateRound);
 };
 
 export default launchProgression;
