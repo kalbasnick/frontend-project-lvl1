@@ -2,26 +2,26 @@ import readlineSync from 'readline-sync';
 
 const numberOfRounds = 3;
 
-const runGame = (gameObjective, lauchGameRound) => {
+const runGame = (gameObjective, generateRound) => {
   const userName = readlineSync.question('Welcome to the Brain Games! \nMay I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(gameObjective);
 
   let correctAnswers = 0;
   while (correctAnswers < numberOfRounds) {
-    const [question, correctAnswer] = lauchGameRound();
+    const [question, correctAnswer] = generateRound();
 
     console.log('Question:', question);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-      correctAnswers += 1;
-    } else {
+    if (userAnswer !== correctAnswer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
+
+    console.log('Correct!');
+    correctAnswers += 1;
   }
 
   console.log(`Congratulations, ${userName}!`);
