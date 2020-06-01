@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import { getRandomNum, getYesOrNo } from '../utils.js';
+import { getRandomNum } from '../utils.js';
 
 const isPrime = (num) => {
   if (num <= 1) {
@@ -18,13 +18,15 @@ const isPrime = (num) => {
 const generateRound = () => {
   const randomNum = getRandomNum(1, 1000);
   const isNumberPrime = isPrime(randomNum);
-  const correctAnswer = getYesOrNo(isNumberPrime);
+  const correctAnswer = isNumberPrime ? 'yes' : 'no';
 
   return [randomNum, correctAnswer];
 };
 
+const gameObjective = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const launchPrime = () => {
-  runGame('Answer "yes" if given number is prime. Otherwise answer "no".', generateRound);
+  runGame(gameObjective, generateRound);
 };
 
 export default launchPrime;

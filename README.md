@@ -1,6 +1,21 @@
 # frontend-project-lvl1
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+
+This repository is my first project of Hexlet's Frontend JavaScript educational programme.
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/4c32a1a9fba4a13d95e3/maintainability)](https://codeclimate.com/github/kalbasnick/frontend-project-lvl1/maintainability)
 [![Linter](https://github.com/kalbasnick/frontend-project-lvl1/workflows/Linter%20Check/badge.svg)](https://github.com/kalbasnick/frontend-project-lvl1/actions)
+
+## Setup
+
+```sh
+$ npm i frontend-project-lvl1-kirichenko-nikita
+```
+
+## Run game
+
+```sh
+$ brain-*gamename*
+```
 
 # Games
 Brain-even:
