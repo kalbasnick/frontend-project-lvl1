@@ -1,4 +1,4 @@
-# frontend-project-lvl1
+# frontend-project-lvl1-kirichenko-nikita
 
 This repository is my first project of Hexlet's Frontend JavaScript educational programme.
 
@@ -8,13 +8,30 @@ This repository is my first project of Hexlet's Frontend JavaScript educational 
 ## Setup
 
 ```sh
-$ npm i frontend-project-lvl1-kirichenko-nikita
+$ make install
 ```
 
-## Run game
+## Run games
 
+Brain-even:
 ```sh
-$ brain-*gamename*
+$ make brain-even
+```
+Brain-calc:
+```sh
+$ make brain-calc
+```
+Brain-gcd:
+```sh
+$ make brain-gcd
+```
+Brain-progression:
+```sh
+$ make brain-progression
+```
+Brain-prime:
+```sh
+$ make brain-prime
 ```
 
 # Games
