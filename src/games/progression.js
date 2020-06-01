@@ -11,7 +11,7 @@ const getQuestion = (startNum, step = 2, indexOfHiddenElement = 0) => {
     gameProgression.push(i === indexOfHiddenElement ? ('..') : (element));
   }
 
-  return gameProgression;
+  return gameProgression.join(' ');
 };
 
 const generateRound = () => {
@@ -19,7 +19,7 @@ const generateRound = () => {
   const step = getRandomNum(2, 9);
   const indexOfHiddenElement = getRandomNum(0, progLength - 1);
 
-  const question = getQuestion(startNum, step, indexOfHiddenElement).join(' ');
+  const question = getQuestion(startNum, step, indexOfHiddenElement);
   const correctAnswer = String(startNum + indexOfHiddenElement * step);
 
   return [question, correctAnswer];
