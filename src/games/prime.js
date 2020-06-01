@@ -16,11 +16,10 @@ const isPrime = (num) => {
 };
 
 const generateRound = () => {
-  const randomNum = getRandomNum(1, 1000);
-  const isNumberPrime = isPrime(randomNum);
-  const correctAnswer = isNumberPrime ? 'yes' : 'no';
+  const question = getRandomNum(1, 1000);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
-  return [randomNum, correctAnswer];
+  return [question, correctAnswer];
 };
 
 const gameObjective = 'Answer "yes" if given number is prime. Otherwise answer "no".';

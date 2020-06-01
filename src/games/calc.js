@@ -10,15 +10,15 @@ const calculate = (num1, num2, operator) => {
     case '*':
       return num1 * num2;
     default:
+      throw new Error('Argument must contain "+", "-" or "*".');
   }
-
-  throw new Error('Argument must contain "+", "-" or "*".');
 };
 
 const generateRound = () => {
   const randomNum1 = getRandomNum(1, 100);
   const randomNum2 = getRandomNum(1, 100);
   const operator = getRandomItem(['+', '-', '*']);
+
   const correctAnswer = String(calculate(randomNum1, randomNum2, operator));
   const question = `${randomNum1} ${operator} ${randomNum2}`;
 

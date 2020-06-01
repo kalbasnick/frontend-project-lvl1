@@ -3,7 +3,7 @@ import { getRandomNum } from '../utils.js';
 
 const progLength = 15;
 
-const getQuestionForRound = (startNum, step = 2, indexOfHiddenElement = 0) => {
+const getQuestion = (startNum, step = 2, indexOfHiddenElement = 0) => {
   const gameProgression = [];
 
   for (let i = 0; i < progLength; i += 1) {
@@ -18,9 +18,8 @@ const generateRound = () => {
   const startNum = getRandomNum(1, 90);
   const step = getRandomNum(2, 9);
   const indexOfHiddenElement = getRandomNum(0, progLength - 1);
-  const gameProgression = getQuestionForRound(startNum, step, indexOfHiddenElement);
 
-  const question = gameProgression.join(' ');
+  const question = getQuestion(startNum, step, indexOfHiddenElement).join(' ');
   const correctAnswer = String(startNum + indexOfHiddenElement * step);
 
   return [question, correctAnswer];
