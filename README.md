@@ -1,4 +1,4 @@
-# frontend-project-lvl1-kirichenko-nikita
+# frontend-project-lvl1
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/4c32a1a9fba4a13d95e3/maintainability)](https://codeclimate.com/github/kalbasnick/frontend-project-lvl1/maintainability)
 [![Linter](https://github.com/kalbasnick/frontend-project-lvl1/workflows/Linter%20Check/badge.svg)](https://github.com/kalbasnick/frontend-project-lvl1/actions)
