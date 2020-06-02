@@ -8,8 +8,8 @@ const runGame = (gameObjective, generateRound) => {
   console.log(`Hello, ${userName}!`);
   console.log(gameObjective);
 
-  let correctAnswers = 0;
-  while (correctAnswers < numberOfRounds) {
+  let numberOfCorrectAnswers = 0;
+  while (numberOfCorrectAnswers < numberOfRounds) {
     const [question, correctAnswer] = generateRound();
 
     console.log('Question:', question);
@@ -22,7 +22,7 @@ const runGame = (gameObjective, generateRound) => {
     }
 
     console.log('Correct!');
-    correctAnswers += 1;
+    numberOfCorrectAnswers += 1;
   }
 
   console.log(`Congratulations, ${userName}!`);
