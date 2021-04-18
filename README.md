@@ -5,7 +5,11 @@
 
 [![CI](https://github.com/kalbasnick/frontend-project-lvl1/actions/workflows/blank.yml/badge.svg)](https://github.com/kalbasnick/frontend-project-lvl1/actions/workflows/blank.yml)
 
-##Games:
-
+###Games:
 Brain-even
+
 [![Brain-even](https://asciinema.org/a/RxP2STaEIBttyrSq7JAOus5f0.svg)](https://asciinema.org/a/RxP2STaEIBttyrSq7JAOus5f0)
+
+Brain-calc
+
+[![Brain-calc](https://asciinema.org/a/VuSeieeQ7ndVkEJdXvEmZdK7y.svg)](https://asciinema.org/a/VuSeieeQ7ndVkEJdXvEmZdK7y)
