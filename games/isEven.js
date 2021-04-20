@@ -1,15 +1,13 @@
-import { getRandomInt } from '../src/utils.js';
+import { getRandomInt, generateResult } from '../src/utils.js';
 import askQuestion from '../src/cli.js';
 
-const isEven = () => {
+const runRoundIsEven = () => {
   const num = getRandomInt(1, 100);
   console.log(`Question: ${num}`);
   const userAnswer = askQuestion('Your answer: ');
   const correctAnswer = num % 2 === 0 ? 'yes' : 'no';
-  const result = [userAnswer, correctAnswer];
-  result.push(userAnswer === correctAnswer ? 'win' : 'defeat');
 
-  return result;
+  return generateResult(userAnswer, correctAnswer);
 };
 
-export default isEven;
+export default runRoundIsEven;

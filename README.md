@@ -5,11 +5,16 @@
 
 [![CI](https://github.com/kalbasnick/frontend-project-lvl1/actions/workflows/blank.yml/badge.svg)](https://github.com/kalbasnick/frontend-project-lvl1/actions/workflows/blank.yml)
 
-###Games:
-Brain-even
+Games:
+
+Is Even?
 
 [![Brain-even](https://asciinema.org/a/RxP2STaEIBttyrSq7JAOus5f0.svg)](https://asciinema.org/a/RxP2STaEIBttyrSq7JAOus5f0)
 
-Brain-calc
+Calculate expression
 
 [![Brain-calc](https://asciinema.org/a/VuSeieeQ7ndVkEJdXvEmZdK7y.svg)](https://asciinema.org/a/VuSeieeQ7ndVkEJdXvEmZdK7y)
+
+Find Greatest Common Divisor
+
+[![Brain-gcd](https://asciinema.org/a/7AyaWJB1JE60d6UpLxV60owiq.svg)](https://asciinema.org/a/7AyaWJB1JE60d6UpLxV60owiq)

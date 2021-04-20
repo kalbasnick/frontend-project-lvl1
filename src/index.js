@@ -1,11 +1,10 @@
 import askQuestion from './cli.js';
 
-const launchGame = (gameFunction) => {
+const launchGame = (gameFunction, numberOfRounds = 3) => {
   console.log('Welcome to the Brain Games!');
   const userName = askQuestion('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  const numberOfRounds = 3;
   let currentRound = 0;
 
   while (numberOfRounds > currentRound) {

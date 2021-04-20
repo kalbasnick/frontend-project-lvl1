@@ -3,9 +3,8 @@ import {
 } from '../src/utils.js';
 import askQuestion from '../src/cli.js';
 
-const calculate = () => {
-  const num1 = getRandomInt(1, 100);
-  const num2 = getRandomInt(1, 100);
+const runRoundCalculate = () => {
+  const [num1, num2] = [getRandomInt(1, 100), getRandomInt(1, 100)];
   const operator = getRandomMathOperator();
   console.log(`What is the result of the expression?\nQuestion: ${num1}${operator}${num2}`);
   const userAnswer = askQuestion('Your answer: ');
@@ -14,4 +13,4 @@ const calculate = () => {
   return generateResult(userAnswer, correctAnswer);
 };
 
-export default calculate;
+export default runRoundCalculate;
