@@ -18,3 +18,7 @@ Calculate expression
 Find Greatest Common Divisor
 
 [![Brain-gcd](https://asciinema.org/a/7AyaWJB1JE60d6UpLxV60owiq.svg)](https://asciinema.org/a/7AyaWJB1JE60d6UpLxV60owiq)
+
+Arithmetic progression
+
+[![asciicast](https://asciinema.org/a/HxhUXRtpCd0u69cLzvAqovl9L.svg)](https://asciinema.org/a/HxhUXRtpCd0u69cLzvAqovl9L)
