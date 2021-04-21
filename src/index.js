@@ -10,7 +10,7 @@ const launchGame = (gameFunction, numberOfRounds = 3) => {
   while (numberOfRounds > currentRound) {
     const roundGame = gameFunction();
     const [userAnswer, correctAnswer, result] = roundGame;
-    if (result === 'win') {
+    if (result) {
       currentRound += 1;
       console.log('Correct!');
     } else {

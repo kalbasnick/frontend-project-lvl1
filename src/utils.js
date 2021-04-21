@@ -4,7 +4,9 @@ export const getRandomItem = (items) => items[getRandomInt(0, items.length - 1)]
 
 export const generateResult = (userAnswer, correctAnswer) => {
   const result = [userAnswer, correctAnswer];
-  result.push(userAnswer === correctAnswer ? 'win' : 'defeat');
+  if (userAnswer === correctAnswer) {
+    result.push('win');
+  }
 
   return result;
 };

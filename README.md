@@ -7,18 +7,22 @@
 
 Games:
 
-Is Even?
+"Even parity"
 
 [![Brain-even](https://asciinema.org/a/RxP2STaEIBttyrSq7JAOus5f0.svg)](https://asciinema.org/a/RxP2STaEIBttyrSq7JAOus5f0)
 
-Calculate expression
+"Calculate expression"
 
 [![Brain-calc](https://asciinema.org/a/VuSeieeQ7ndVkEJdXvEmZdK7y.svg)](https://asciinema.org/a/VuSeieeQ7ndVkEJdXvEmZdK7y)
 
-Find Greatest Common Divisor
+"Find greatest common divisor"
 
 [![Brain-gcd](https://asciinema.org/a/7AyaWJB1JE60d6UpLxV60owiq.svg)](https://asciinema.org/a/7AyaWJB1JE60d6UpLxV60owiq)
 
-Arithmetic progression
+"Arithmetic progression"
 
-[![asciicast](https://asciinema.org/a/HxhUXRtpCd0u69cLzvAqovl9L.svg)](https://asciinema.org/a/HxhUXRtpCd0u69cLzvAqovl9L)
+[![Brain-progression](https://asciinema.org/a/HxhUXRtpCd0u69cLzvAqovl9L.svg)](https://asciinema.org/a/HxhUXRtpCd0u69cLzvAqovl9L)
+
+"Is it a prime number?"
+
+[![Brain-prime](https://asciinema.org/a/yDxSo1E1L4MCOi1wSfD9uQ6Xp.svg)](https://asciinema.org/a/yDxSo1E1L4MCOi1wSfD9uQ6Xp)
