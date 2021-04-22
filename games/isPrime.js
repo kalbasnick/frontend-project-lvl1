@@ -2,7 +2,7 @@ import { generateResult, getRandomInt } from '../src/utils.js';
 import askQuestion from '../src/cli.js';
 
 const isPrime = (num) => {
-  if (num === 1) {
+  if (num <= 1) {
     return false;
   }
 
