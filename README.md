@@ -9,7 +9,7 @@ Games:
 
 "Even parity"
 
-[![Brain-even](https://asciinema.org/a/RxP2STaEIBttyrSq7JAOus5f0.svg)](https://asciinema.org/a/RxP2STaEIBttyrSq7JAOus5f0)
+[![Brain-even](https://asciinema.org/a/v7C3x8Fn78gDaOduOVwvNv7X1.svg)](https://asciinema.org/a/v7C3x8Fn78gDaOduOVwvNv7X1)
 
 "Calculate expression"
 
