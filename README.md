@@ -7,9 +7,13 @@
 
 ### Setup guide:
 
+<<<<<<< HEAD
 ```sh
 # make install
 ```
+=======
+`# make install`
+>>>>>>> 4aafe8ebed3821c40c629729ac6193a753baee7e
 
 ### Games:
 
