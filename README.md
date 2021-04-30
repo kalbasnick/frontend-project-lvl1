@@ -15,20 +15,20 @@
 
 Even parity
 
-[![Brain-even](https://asciinema.org/a/v7C3x8Fn78gDaOduOVwvNv7X1.svg)](https://asciinema.org/a/v7C3x8Fn78gDaOduOVwvNv7X1)
+[![Even parity](https://asciinema.org/a/L9bIjU2thx6EP5xTd2D6d7ipG.svg)](https://asciinema.org/a/L9bIjU2thx6EP5xTd2D6d7ipG)
 
 Calculate expression
 
-[![Brain-calc](https://asciinema.org/a/VuSeieeQ7ndVkEJdXvEmZdK7y.svg)](https://asciinema.org/a/VuSeieeQ7ndVkEJdXvEmZdK7y)
+[![Calculate expression](https://asciinema.org/a/h2URIPjvfOe3DgBtdQqobMbJ8.svg)](https://asciinema.org/a/h2URIPjvfOe3DgBtdQqobMbJ8)
 
 Find greatest common divisor
 
-[![Brain-gcd](https://asciinema.org/a/7AyaWJB1JE60d6UpLxV60owiq.svg)](https://asciinema.org/a/7AyaWJB1JE60d6UpLxV60owiq)
+[![Find GCD](https://asciinema.org/a/KU0wbffc5rUEVIWOE3VGtcqs1.svg)](https://asciinema.org/a/KU0wbffc5rUEVIWOE3VGtcqs1)
 
 Arithmetic progression
 
-[![Brain-progression](https://asciinema.org/a/HxhUXRtpCd0u69cLzvAqovl9L.svg)](https://asciinema.org/a/HxhUXRtpCd0u69cLzvAqovl9L)
+[![Arithmetic progression](https://asciinema.org/a/DVZqyrC7fSsTAKx3fPiEv28Ce.svg)](https://asciinema.org/a/DVZqyrC7fSsTAKx3fPiEv28Ce)
 
 Is it a prime number?
 
-[![Brain-prime](https://asciinema.org/a/yDxSo1E1L4MCOi1wSfD9uQ6Xp.svg)](https://asciinema.org/a/yDxSo1E1L4MCOi1wSfD9uQ6Xp)
+[![Is Prime?](https://asciinema.org/a/SnjgvGW8zWzQLdZAw4m0t6P6q.svg)](https://asciinema.org/a/SnjgvGW8zWzQLdZAw4m0t6P6q)

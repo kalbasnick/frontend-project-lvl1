@@ -1,7 +1,6 @@
-import { generateResult, getRandomInt, getRandomItem } from '../src/utils.js';
-import askQuestion from '../src/cli.js';
+import { getRandomInt, getRandomItem, askQuestion } from '../utils.js';
 
-const makeProgression = (start, step, length) => {
+const makeProgressionForRound = (start, step, length) => {
   const progression = [start];
 
   while (progression.length < length) {
@@ -16,12 +15,15 @@ const makeProgression = (start, step, length) => {
 };
 
 const runRoundProgression = () => {
-  const roundTask = makeProgression(getRandomInt(1, 100), getRandomInt(2, 9), getRandomInt(5, 10));
+  const start = getRandomInt(1, 100);
+  const step = getRandomInt(2, 9);
+  const length = getRandomInt(5, 10);
+  const roundTask = makeProgressionForRound(start, step, length);
   const [question, correctAnswer] = roundTask;
   console.log(`What number is missing in the progression?\nQuestion: ${question}`);
   const userAnswer = askQuestion('Your answer: ');
 
-  return generateResult(userAnswer, correctAnswer);
+  return [userAnswer, correctAnswer];
 };
 
 export default runRoundProgression;

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 import launchGame from '../src/index.js';
-import runRoundGcd from '../games/gcd.js';
+import game from '../src/games/gcd.js';
 
-launchGame(runRoundGcd);
+launchGame(game);

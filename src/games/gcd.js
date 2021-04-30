@@ -1,5 +1,4 @@
-import { getRandomInt, generateResult } from '../src/utils.js';
-import askQuestion from '../src/cli.js';
+import { getRandomInt, askQuestion } from '../utils.js';
 
 const getGcd = (num1, num2) => {
   if (num2 < 1) {
@@ -14,7 +13,7 @@ const runRoundGcd = () => {
   const userAnswer = askQuestion('Your answer: ');
   const correctAnswer = getGcd(num1, num2);
 
-  return generateResult(userAnswer, correctAnswer);
+  return [userAnswer, correctAnswer];
 };
 
 export default runRoundGcd;

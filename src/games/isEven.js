@@ -1,13 +1,14 @@
-import { getRandomInt, generateResult } from '../src/utils.js';
-import askQuestion from '../src/cli.js';
+import { getRandomInt, askQuestion } from '../utils.js';
+
+const isEven = (num) => num % 2 === 0;
 
 const runRoundIsEven = () => {
   const num = getRandomInt(1, 100);
   console.log(`Answer "yes" if the number is even, otherwise answer "no".\nQuestion: ${num}`);
   const userAnswer = askQuestion('Your answer: ');
-  const correctAnswer = num % 2 === 0 ? 'yes' : 'no';
+  const correctAnswer = isEven(num) ? 'yes' : 'no';
 
-  return generateResult(userAnswer, correctAnswer);
+  return [userAnswer, correctAnswer];
 };
 
 export default runRoundIsEven;

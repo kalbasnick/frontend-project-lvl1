@@ -1,5 +1,4 @@
-import { generateResult, getRandomInt } from '../src/utils.js';
-import askQuestion from '../src/cli.js';
+import { getRandomInt, askQuestion } from '../utils.js';
 
 const isPrime = (num) => {
   if (num <= 1) {
@@ -24,7 +23,7 @@ const runRoundIsPrime = () => {
   const userAnswer = askQuestion('Your answer: ');
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
-  return generateResult(userAnswer, correctAnswer);
+  return [userAnswer, correctAnswer];
 };
 
 export default runRoundIsPrime;

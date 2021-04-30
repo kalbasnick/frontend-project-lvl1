@@ -1,7 +1,4 @@
-import {
-  getRandomInt, getRandomItem, generateResult,
-} from '../src/utils.js';
-import askQuestion from '../src/cli.js';
+import { getRandomInt, getRandomItem, askQuestion } from '../utils.js';
 
 const calculateExpression = (num1, num2, operator) => {
   switch (operator) {
@@ -23,7 +20,7 @@ const runRoundCalc = () => {
   const userAnswer = askQuestion('Your answer: ');
   const correctAnswer = calculateExpression(num1, num2, operator);
 
-  return generateResult(userAnswer, correctAnswer);
+  return [userAnswer, correctAnswer];
 };
 
 export default runRoundCalc;
