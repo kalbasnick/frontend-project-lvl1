@@ -1,11 +1,10 @@
-import { getRandomInt, getRandomItem, askQuestion } from '../utils.js';
+import getRandomInt, { getRandomItem } from '../utils.js';
 
-const makeProgressionForRound = (start, step, length) => {
+const generateProgressionForRound = (start, step, specificLength) => {
   const progression = [start];
 
-  while (progression.length < length) {
-    const lastNum = progression.length - 1;
-    progression.push(progression[lastNum] + step);
+  while (progression.length < specificLength) {
+    progression.push(progression[progression.length - 1] + step);
   }
 
   const hiddenNum = getRandomItem(progression);
@@ -14,16 +13,13 @@ const makeProgressionForRound = (start, step, length) => {
   return [progression.join(' '), `${hiddenNum}`];
 };
 
-const runRoundProgression = () => {
-  const start = getRandomInt(1, 100);
-  const step = getRandomInt(2, 9);
-  const length = getRandomInt(5, 10);
-  const roundTask = makeProgressionForRound(start, step, length);
-  const [question, correctAnswer] = roundTask;
-  console.log(`What number is missing in the progression?\nQuestion: ${question}`);
-  const userAnswer = askQuestion('Your answer: ');
+export default () => {
+  const gameTask = 'What number is missing in the progression?';
+  const [question, correctAnswer] = generateProgressionForRound(
+    getRandomInt(1, 100),
+    getRandomInt(2, 9),
+    getRandomInt(5, 10),
+  );
 
-  return [userAnswer, correctAnswer];
+  return [gameTask, question, correctAnswer];
 };
-
-export default runRoundProgression;

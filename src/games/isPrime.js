@@ -1,29 +1,23 @@
-import { getRandomInt, askQuestion } from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const isPrime = (num) => {
   if (num <= 1) {
     return false;
   }
 
-  let divisor = Math.floor(num / 2);
-
-  while (divisor > 1) {
+  for (let divisor = Math.floor(num / 2); divisor > 1; divisor -= 1) {
     if (num % divisor === 0) {
       return false;
     }
-    divisor -= 1;
   }
 
   return true;
 };
 
-const runRoundIsPrime = () => {
-  const question = getRandomInt(1, 100);
-  console.log(`Answer "yes" if given number is prime. Otherwise answer "no".\nQuestion: ${question}`);
-  const userAnswer = askQuestion('Your answer: ');
+export default () => {
+  const gameTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const question = `${getRandomInt(1, 100)}`;
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
-  return [userAnswer, correctAnswer];
+  return [gameTask, question, correctAnswer];
 };
-
-export default runRoundIsPrime;

@@ -1,19 +1,18 @@
-import { getRandomInt, askQuestion } from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const getGcd = (num1, num2) => {
   if (num2 < 1) {
     return num1;
   }
-  return String(getGcd(num2, num1 % num2));
+
+  return getGcd(num2, num1 % num2);
 };
 
-const runRoundGcd = () => {
+export default () => {
+  const gameTask = 'Find the greatest common divisor of given numbers.';
   const [num1, num2] = [getRandomInt(1, 100), getRandomInt(1, 100)];
-  console.log(`Find the greatest common divisor of given numbers.\nQuestion: ${num1} ${num2}`);
-  const userAnswer = askQuestion('Your answer: ');
-  const correctAnswer = getGcd(num1, num2);
+  const question = `${num1} ${num2}`;
+  const correctAnswer = String(getGcd(num1, num2));
 
-  return [userAnswer, correctAnswer];
+  return [gameTask, question, correctAnswer];
 };
-
-export default runRoundGcd;
